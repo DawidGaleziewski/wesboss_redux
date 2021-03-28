@@ -24,7 +24,8 @@ const Photo = React.createClass({
                         {post.caption}
                     </p>
                     <div className="control-buttons">
-                        <button className="likes">
+                        {/* Running increment action */}
+                        <button onClick={this.props.increment.bind(null, i)} className="likes">
                             &hearts; {post.likes}
                         </button>
                         <Link to={`/view/${post.code}`}>
